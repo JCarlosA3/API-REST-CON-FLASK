@@ -2,16 +2,11 @@ import sqlite3
 
 DB_NAME = "myDB.db"
 
-# ----------------------------
-# CONEXIÓN GENERAL
-# ----------------------------
+
 def connection():
     return sqlite3.connect(DB_NAME)
 
 
-# ----------------------------
-# CREATE
-# ----------------------------
 def post(data):
     try:
         conn = connection()
@@ -28,9 +23,6 @@ def post(data):
         conn.close()
 
 
-# ----------------------------
-# READ
-# ----------------------------
 def get():
     try:
         conn = connection()
@@ -52,9 +44,6 @@ def get():
         conn.close()
 
 
-# ----------------------------
-# UPDATE
-# ----------------------------
 def put(user_id, data):
     try:
         conn = connection()
@@ -76,9 +65,6 @@ def put(user_id, data):
         conn.close()
 
 
-# ----------------------------
-# DELETE
-# ----------------------------
 def delete(user_id):
     try:
         conn = connection()
